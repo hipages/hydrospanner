@@ -1,11 +1,7 @@
 # hydrospanner
 
-# install
-* clone this repo
-* in chrome go to [chrome://extensions/](chrome://extensions/)
-* hit the 'development mode' button
-* hit 'load unpacked' extension
-* browse to the directory you cloned.
+## Install
+* Install via [Chrome Web Store](https://chrome.google.com/webstore/detail/hydrospanner/egleimbllngdkhpaodmafcgepplikdda) 
 * Go to [hip-new](https://github.com/hipagesgroup/hip-new) (refresh your browser)
 * look for your branch, hit the buttons.
 * magic

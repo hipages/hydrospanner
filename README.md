@@ -2,7 +2,7 @@
 
 # install
 * clone this repo
-* in chrome go to [chrome extensions](chrome://extensions/)
+* in chrome go to [chrome://extensions/](chrome://extensions/)
 * hit the 'development mode' button
 * hit 'load unpacked' extension
 * browse to the directory you cloned.

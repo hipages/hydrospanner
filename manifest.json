@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Hydrospanner",
+  "description": "Hipages extension to preview branches on kube",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/hipagesgroup/*"],
+      "js": ["jquery.js", "button.js"]
+    }
+  ],
+  "version": "0.1"
+}

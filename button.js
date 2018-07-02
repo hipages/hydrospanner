@@ -10,25 +10,29 @@ function slugify(text) {
     .replace(/_/g, '-');
 }
 
-const repos = ['hip-new', 'opus'];
-const hipDomain = `www-hip-new`;
-const opusDomain = `opus`;
+const repos = [
+  { name: 'hip-new', domain: 'www-hip-new' },
+  { name: 'hip-microapp-directory', domain: 'hip-microapp-directory' },
+  { name: 'platform-search-service', domain: 'platform-search-service' },
+  { name: 'lectio', domain: 'lectio' },
+  { name: 'socium', domain: 'socium' },
+  { name: 'opus', domain: 'opus' },
+  { name: 'conmendator', domain: 'conmendator' }
+];
+
 function findDomain() {
-  switch (true) {
-    case location.pathname.includes('hip-new'):
-      return hipDomain;
-      break;
-    case location.pathname.includes('opus'):
-      return opusDomain;
-      break;
-    default:
-      return null;
+  const repo = repos.find(repo => location.pathname.includes(repo.name));
+
+  if (repo) {
+    return repo.domain;
   }
 }
 
+const domain = findDomain();
+
 function renderButtons(parent, branch) {
   const dubdubdub = `
-<a href="https://${branch}-${findDomain()}.k8s.hipages.com.au/" class="btn btn-outline btn-sm border-blue">
+<a href="https://${branch}-${domain}.k8s.hipages.com.au/" class="btn btn-outline btn-sm border-blue">
       Preview www
   </a>`;
   const admin = `<a href="https://${branch}-admin-hip-new.k8s.hipages.com.au/" style="margin-left:5px" class="btn btn-outline btn-sm border-blue">
@@ -40,7 +44,7 @@ function renderButtons(parent, branch) {
 
 function findAndRender() {
   // Only run on selected repos;
-  if (!repos.find(repo => location.pathname.indexOf(repo) > -1)) {
+  if (!repos.find(repo => location.pathname.indexOf(repo.name) > -1)) {
     return false;
   }
 

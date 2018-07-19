@@ -11,6 +11,10 @@
 
 `hip-microapp-directory`
 
+`hip-message-service`
+
+`getquotes.com.au`
+
 `conmendator`
 
 `hip-new`

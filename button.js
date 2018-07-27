@@ -35,12 +35,12 @@ const isHipNew = domain === 'www-hip-new';
 
 function renderButtons(parent, branch) {
   if (isHipNew) {
-    const dubdubdub = `<a href="https://${branch}-${domain}.k8s.hipages.com.au/" class="btn btn-outline btn-sm border-blue">Preview www</a>`;
-    const admin = `<a href="https://${branch}-admin-hip-new.k8s.hipages.com.au/" style="margin-left:5px" class="btn btn-outline btn-sm border-blue">Preview admin</a>`;
+    const dubdubdub = `<a href="https://${branch}-${domain}.k8s.hipages.com.au/" class="btn btn-outline btn-sm border-blue">View staging</a>`;
+    const admin = `<a href="https://${branch}-admin-hip-new.k8s.hipages.com.au/" style="margin-left:5px" class="btn btn-outline btn-sm border-blue">View admin staging</a>`;
     parent.append(dubdubdub);
     parent.append(admin);
   } else {
-    const dubdubdub = `<a href="https://${branch}-${domain}.k8s.hipages.com.au/" class="btn btn-outline btn-sm border-blue">View staging branch</a>`;
+    const dubdubdub = `<a href="https://${branch}-${domain}.k8s.hipages.com.au/" class="btn btn-outline btn-sm border-blue">View staging</a>`;
     parent.append(dubdubdub);
   }
 }
